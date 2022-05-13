@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "numerouno": "cpp"
+        "numerouno": "cpp",
+        "uno": "cpp"
     }
 }
