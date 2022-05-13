@@ -2,61 +2,40 @@
 
 using namespace std;
 
-string name;
-int salary;
-float Fwt, Fica;
+void calculator(int x, int y){
 
-string getName(){
-    return name;
+    int sum, difference, product, modulo;
+    float quotient;
+
+    // Adding two numbers
+    sum = x + y;
+    // Subtracting two numbers
+    difference = x - y;
+    // Multiplying two numbers
+    product = x * y;
+    // Dividing two numbers
+    quotient = x / y;
+    // Modulo
+    modulo = x % y;
+
+    cout << "Sum = " << sum << endl;
+    cout << "Difference  = " << difference << endl;
+    cout << "Multiplication = " << product << endl;
+    cout << "Division = " << quotient << endl;
+    cout << "Remainder = " << modulo << endl;
 }
 
-int getSalary(){
-    return salary;
-}
-
-void displayInfo(string employeeName, float fwt, float fica, int netPay){
-
-    cout << "Employee Name: " << employeeName << endl;
-    cout << "federal withholding tax(FWT): " << fwt << endl;
-    cout << "federal insurance contribution act (FICA): " << fica << endl;
-    cout << "Net Pay: " << netPay << endl;
-}
-
-void calcNetPay(float &fwt, float &fica){
-
-    float netPay = getSalary() - fwt - fica;
-
-    displayInfo(getName(), fwt, fica, netPay);
-}
-
-void CalcFica(){
-
-    float ficaRate = .08;
-    Fica = getSalary() * ficaRate;
-
-    calcNetPay(Fwt, Fica);
-}
-
-// calculate federal withholding tax(FWT) (function)
-void calcFwt(){
-
-    float fwtRate = .20;
-    Fwt = getSalary() * fwtRate;
-
-    CalcFica();
-}
-
-// main function
 int main()
 {
+    int first, second;
 
-    cout << "Enter your name: ";
-    getline(cin, name);
+    cout << "Enter first number: ";
+    cin >> first;
 
-    cout << "Enter your weekly salary: ";
-    cin >> salary;
+    cout << "Enter second number: ";
+    cin >> second;
 
-    calcFwt();
+    calculator(first, second);
 
     return 0;
 }

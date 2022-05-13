@@ -24,7 +24,7 @@ void displayInfo(string employeeName, float fwt, float fica, int netPay){
 
 void calcNetPay(float &fwt, float &fica){
 
-    float netPay = getSalary() - (fwt + fica);
+    float netPay = getSalary() - fwt - fica;
 
     displayInfo(getName(), fwt, fica, netPay);
 }
