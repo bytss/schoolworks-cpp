@@ -46,7 +46,6 @@ int main()
 
     sort(candidate_name, candidate_votes, candidates);
 
-
     int j = candidates;
     while(j > 0){
         j--;
