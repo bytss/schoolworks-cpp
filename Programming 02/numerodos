@@ -29,7 +29,7 @@ int sum_votes(int total, int candidate_votes){
 
 int main()
 {
-    int candidates = 3, votes = 0;
+    int candidates = 15, votes = 0;
     string candidate_name[candidates];
     int candidate_votes[candidates];
 
