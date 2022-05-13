@@ -33,8 +33,6 @@ void CalcFica(){
 
     float ficaRate = .08;
     Fica = getSalary() * ficaRate;
-
-    calcNetPay(Fwt, Fica);
 }
 
 // calculate federal withholding tax(FWT) (function)
@@ -42,8 +40,6 @@ void calcFwt(){
 
     float fwtRate = .20;
     Fwt = getSalary() * fwtRate;
-
-    CalcFica();
 }
 
 // main function
@@ -57,6 +53,8 @@ int main()
     cin >> salary;
 
     calcFwt();
+    CalcFica();
+    calcNetPay(Fwt, Fica);
 
     return 0;
 }
