@@ -18,14 +18,14 @@ bool is_senior(int age){
          return false;
 }
 
-void totalBills(int amount){
+void totalBills(float amount){
 
     cout << "Account Balance: " << amount << endl;
 }
 
 void checkBill(int age, char member, float bills){
 
-    int amount;
+    float amount;
 
     if(is_member(member) && is_senior(age))
         amount = (bills * .85) * .80;
