@@ -2,8 +2,9 @@
 
 using namespace std;
 
-string name = "";
-int salary = 0;
+string name;
+int salary;
+float Fwt, Fica;
 
 string getName(){
     return name;
@@ -13,9 +14,9 @@ int getSalary(){
     return salary;
 }
 
-void displayInfo(string name, float fwt, float fica, int netPay){
+void displayInfo(string employeeName, float fwt, float fica, int netPay){
 
-    cout << "Employee Name: " << name << endl;
+    cout << "Employee Name: " << employeeName << endl;
     cout << "federal withholding tax(FWT): " << fwt << endl;
     cout << "federal insurance contribution act (FICA): " << fica << endl;
     cout << "Net Pay: " << netPay << endl;
@@ -28,23 +29,21 @@ void calcNetPay(float &fwt, float &fica){
     displayInfo(getName(), fwt, fica, netPay);
 }
 
-void CalcFica(float fwt){
+void CalcFica(){
 
     float ficaRate = .08;
+    Fica = getSalary() * ficaRate;
 
-    float fica = getSalary() * ficaRate;
-
-    calcNetPay(fwt, fica);
+    calcNetPay(Fwt, Fica);
 }
 
 // calculate federal withholding tax(FWT) (function)
 void calcFwt(){
 
     float fwtRate = .20;
+    Fwt = getSalary() * fwtRate;
 
-    float fwt = getSalary() * fwtRate;
-
-    CalcFica(fwt);
+    CalcFica();
 }
 
 // main function
