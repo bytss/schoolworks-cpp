@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "numerouno": "cpp",
-        "uno": "cpp"
+        "uno": "cpp",
+        "function_singko": "cpp"
     }
 }
