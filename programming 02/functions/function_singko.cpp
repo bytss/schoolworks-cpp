@@ -20,7 +20,7 @@ int main()
     }
 
     // Loop to store largest number to student_grade[0]
-    for(int k = 1; k < subjects; k++) {
+    for(int k = 0; k < subjects; k++) {
         // an if statement to find and switch highest grade
         if(student_grade[0] < student_grade[k])
             student_grade[0] = student_grade[k];
@@ -28,7 +28,7 @@ int main()
 
     // Loop to store lowest number to student_grade[subjects - 1]
     // index always start at 0
-    for(int k = 1; k < subjects; k++) {
+    for(int k = 0; k < subjects; k++) {
         // an if statement to find and switch the lowest grade
         if(student_grade[subjects - 1] > student_grade[k])
             student_grade[subjects - 1] = student_grade[k];
