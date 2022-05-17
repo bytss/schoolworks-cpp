@@ -13,7 +13,7 @@ void content(string a[]){
 
 int main(){
 
-    string book[6] = {"Introduction to c++", "History of C++", "C++ Fundamentals", "Data types and Bariables", "Operators", "Basic Syntax"};
+    string book[6] = {"Introduction to c++", "History of C++", "C++ Fundamentals", "Data types and Variables", "Operators", "Basic Syntax"};
 
     content(book);
     return 0;
