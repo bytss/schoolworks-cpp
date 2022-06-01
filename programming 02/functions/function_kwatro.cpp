@@ -9,7 +9,6 @@ char lister(int i, float &f){
         return 'Y';
      else
         return 'N';
-
 }
 
 int main(){
