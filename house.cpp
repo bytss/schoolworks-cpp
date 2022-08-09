@@ -6,6 +6,10 @@
 
 using namespace std;
 
+void printLine(){
+    cout << "----------------------------------------------------------------------------" << endl;
+}
+
 int main()
 {
     int totalMonthlyIncome = 0, totalMonthlyExpense = 0;
@@ -19,15 +23,15 @@ int main()
     cout << "Total Monthly Expense: ";
     cin >> totalMonthlyExpense;
 
-    cout << "----------------------------------------------------------------------------" << endl;
+    printLine();
     cout << "| House Model | Total Contract Price | Down Payment | Monthly Amortization |" << endl;
-    cout << "----------------------------------------------------------------------------" << endl;
+    printLine();
     cout << "|     A           3,563,890.00          30% of TCP          25,789.00      |" << endl;
-    cout << "----------------------------------------------------------------------------" << endl;
+    printLine();
     cout << "|     B           2,678,400.00          20% of TCP          20,675.00      |" << endl;
-    cout << "----------------------------------------------------------------------------" << endl;
+    printLine();
     cout << "|     C           1,980,700.00          15% of TCP          18,763.00      |" << endl;
-    cout << "----------------------------------------------------------------------------" << endl;
+    printLine();
 
     cout << "Preferred Model House (A, B or C): ";
     cin >> modelHouse;
@@ -40,7 +44,7 @@ int main()
     cout << "House Model: " << modelHouse << endl;
     cout << "Mode of Payment: " << modeOfPayment << endl;
 
-    // checking client modelHouse and his/her payment method
+    // checking client model house and their payment method
     if(modelHouse == 'A'){
         cout << "Total Contract Price: 3,563,890.00" << endl;
 
